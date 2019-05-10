@@ -28,7 +28,7 @@ module.exports = {
                 const result = await building.save();
                 return {
                     ...result._doc,
-                    building : result,
+                    building: result,
                 }
             }
         } catch (error) {
@@ -36,5 +36,15 @@ module.exports = {
         }
 
 
+    },
+    getAllBuilding: async => {
+        try {
+            const buildings = await Building.find();
+            return buildings.map(building => {
+                
+            })
+        } catch (error) {
+            throw error;
+        }
     }
 }

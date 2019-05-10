@@ -65,11 +65,17 @@ type DiaChinh {
   codeTinh : String
 }
 
+input DiaChinhInput {
+  codeHuyen : String
+  huyen : String
+  tinh : String
+  codeTinh : String
+}
 input BuildingInput {
   address : String!
   blocks : [String!]!
   code : String!
-  diaChinh : String!
+  diaChinh : DiaChinhInput
   hotLine : String!
   name : String!
   status : Int!
